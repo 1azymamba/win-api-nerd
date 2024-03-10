@@ -131,7 +131,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="tmp.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display_message_box.h" />

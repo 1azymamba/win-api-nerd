@@ -1,2 +1,4 @@
-﻿  tmp.c
+﻿  main.c
+C:\Users\shint\Desktop\my-projects\Dev\WinAPINerd\main.c(53,11): warning C4133: 'function': incompatible types - from 'LPSTR' to 'LPCWSTR'
+C:\Users\shint\Desktop\my-projects\Dev\WinAPINerd\main.c(67): warning C4715: 'WinMain': not all control paths return a value
   WinAPINerd.vcxproj -> C:\Users\shint\Desktop\my-projects\Dev\WinAPINerd\x64\Debug\WinAPINerd.exe
