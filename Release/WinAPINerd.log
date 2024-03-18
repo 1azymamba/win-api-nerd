@@ -1,0 +1,9 @@
+﻿  main.c
+C:\Users\shint\Desktop\my-projects\Dev\WinAPINerd\main.c(60,11): warning C4133: 'function': incompatible types - from 'LPSTR' to 'LPCWSTR'
+  Generating code
+C:\Users\shint\Desktop\my-projects\Dev\WinAPINerd\main.c(75): warning C4715: 'WinMain': not all control paths return a value
+  1 of 1 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  WinAPINerd.vcxproj -> C:\Users\shint\Desktop\my-projects\Dev\Release\WinAPINerd.exe

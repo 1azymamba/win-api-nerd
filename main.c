@@ -13,6 +13,8 @@ https://wisdom.sakura.ne.jp/system/winapi/win32/win3.html
 
 #include <stdio.h>
 #include <windows.h>
+#include <Shlwapi.h> 
+#pragma comment(lib, "Shlwapi.lib")
 
 // ここのWINAPIは
 // define WINAPI __stdcallとして定義されていて、Win32APIを呼び出すときの規約のこと。
@@ -27,9 +29,14 @@ int WINAPI WinMain(
 	LPSTR lpCmdLine, // コマンドラインから受け取った引数 LPSTR型はWindows標準の文字型 LPSTR == char *
 	int nCmdShow) {
 
+	TCHAR tempPath[MAX_PATH];
+	TCHAR fullPath[MAX_PATH];
+	DWORD tmp_path_len = GetTempPathW(MAX_PATH, tempPath);
+
+	PathCombine(fullPath, tempPath, L"hoge.txt");
 
 	HANDLE hFile = CreateFileW(
-		L"hoge.txt", 
+		fullPath,
 		GENERIC_READ | GENERIC_WRITE,
 		FILE_SHARE_WRITE, 
 		NULL, 
@@ -63,6 +70,7 @@ int WINAPI WinMain(
 
 	MessageBox(NULL, TEXT("File writing was successed!"), TEXT("WriteFile"), MB_OK);
 	CloseHandle(hFile);
+
 
 }
 
